@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "west2_consoleRpg/1.0.0": {
+        "runtime": {
+          "west2_consoleRpg.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "west2_consoleRpg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

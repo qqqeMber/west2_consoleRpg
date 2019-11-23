@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<config>
+  <weapon id ="1" name ="生锈的铁剑" atk= "1" price="5"/>
+  <weapon id ="2" name ="秋叶刀" atk ="10" price="50"/>
+  <weapon id ="3" name ="裂创心灵之刃" atk ="20" price="100"/>
+  <weapon id ="4" name ="流光星陨刀" atk="40" price="200"/>
+  <weapon id ="5" name ="苍穹幕落太刀" atk="100" price="500"/>
+
+  <item id ="1" name = "变异草莓" hp ="5" mp="0" price="5"/>
+  <item id ="2" name = "基础HP回复药剂" hp ="10" mp="0" price="10"/>
+  <item id ="3" name = "基础MP回复药剂" mp ="10" hp="0" price="10"/>
+  <item id ="4" name = "达人HP回复药剂" hp ="40" mp="0" price="30"/>
+  <item id ="5" name = "达人MP回复药剂" mp ="40" hp="0" price="30"/>
+
+  <monster id="1" name ="哥布林" hp="10" atk="1"/>
+  <monster id="2" name ="变异猫妖" hp="20"  atk="10"/>
+  <monster id="3" name ="牛头人" hp="100" atk="40"/>
+  <monster id="4" name ="菜虚鲲" hp="300" atk="60"/>
+  <monster id="5" name ="榜一" hp="100"  atk="500"/>
+  <monster id="6" name ="蔡碧" hp="250"  atk="250"/>
+  <monster id="7" name ="乔碧萝" hp="1000"  atk="100"/>
+
+
+  <job id="1" name="剑士" hp="50" atk="3" mp="10" hprate="2" mprate="2" atkrate="2"/>
+  <job id="2" name="刺客" hp="30" atk="5" mp="10" hprate="1" mprate="1" atkrate="4"/>
+  <job id="3" name="法师" hp="30" atk="5" mp="20" hprate="1" mprate="4" atkrate="2"/>
+
+  <equip id="1" name="破旧的黑陶胸甲" hp="20" mp="5" price="10"/>
+  <equip id="2" name="盘龙之脊胸甲" hp="40" mp="20" price="30"/>
+  <equip id="3" name="黑龙汲星胸甲" hp="100" mp="30" price="100"/>
+  <equip id="4" name="破旧的黑陶腰带" hp="10" mp="5" price="10"/>
+  <equip id="5" name="地灵绝魂腰带" hp="30" mp="10" price="50"/>
+  <equip id="6" name="破旧的黑陶短靴" hp="5" mp="5" price="10"/>
+  <equip id="7" name="加卡西亚的冥骨长靴" hp="20" mp="10" price="50"/>
+  <equip id="9" name="梵风衣" hp="200" mp="100" price="500"/>
+  
+  <skill id="1" name="雷霆毁灭" mp="10" rate="1.1"/>
+  <skill id="2" name="致残打击" mp="20" rate="1.3"/>
+  <skill id="3" name="飞花逐月" mp="30" rate="1.5"/>
+  <skill id="4" name="星爆气流斩" mp="40" rate="2.0"/>
+  <skill id="5" name="反坦克炮" mp="100" rate="5"/>
+</config>
