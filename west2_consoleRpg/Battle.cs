@@ -80,6 +80,7 @@ namespace west2_consoleRpg
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("坦克们正在跃跃欲试地等你挑战呢");
+            Console.ReadKey();
             int i = 4;
             for (; i < 8; i++)
             {
