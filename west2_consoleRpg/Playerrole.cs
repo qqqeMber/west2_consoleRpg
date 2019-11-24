@@ -22,6 +22,8 @@ namespace west2_consoleRpg
         public int atkrate;
         public static Equip equip1, equip2, equip3;
         public static Skill skill1, skill2, skill3, skill4, skill5;
+        public static Item item1=GameRes.GetItem(1), item2=GameRes.GetItem(2), item3=GameRes.GetItem(3), item4=GameRes.GetItem(4),item5=GameRes.GetItem(5);
+        public static int i1=0, i2=0, i3=0, i4=0,i5=0;
         public static Playerrole Instance = new Playerrole();
         
         public static void CreatPlayer()
@@ -35,7 +37,12 @@ namespace west2_consoleRpg
             Playerrole.Instance.jobid = int.Parse(Console.ReadLine());
             Console.WriteLine("\t1.确认  2.重新输入");
             Console.Write("\t");
-            if (int.Parse(Console.ReadLine()) == 1)
+        hehe:
+            string cs = Console.ReadLine();
+            if (cs == "")
+                goto hehe;
+            int n = int.Parse(cs);
+            if (n == 1)
             {
                 Instance.basehp = GameRes.GetJob(Instance.jobid).hp;
                 Instance.basemp = GameRes.GetJob(Instance.jobid).mp;
@@ -87,7 +94,8 @@ namespace west2_consoleRpg
             Console.WriteLine("\t\t\t等级:{0}", Instance.level);
             Console.WriteLine("\t\t\t攻击:{0}", Instance.atk);
             Console.WriteLine("\t\t\t血量:{0}", Instance.hp);
-            Console.WriteLine("\t\t\t蓝量:{0}", Instance.mp);
+            Console.WriteLine("\t\t\t法力值:{0}", Instance.mp);
+            Console.WriteLine("\t\t\t金币:{0}", Instance.gold);
             Console.WriteLine("这么弱，还怎么干坦克");
             Console.ReadKey();
             Program.Mainui();
@@ -135,34 +143,7 @@ namespace west2_consoleRpg
             Console.ReadKey();
             Program.Mainui();
         }
-    /*    public static void LearnSkill()
-        {
-            if (Instance.level >= 5)
-            {
-                skill1 = GameRes.GetSkill(1);
-                
-            }
-            if (Instance.level >= 10)
-            {
-                skill2 = GameRes.GetSkill(2);
-
-            }
-            if (Instance.level >= 15)
-            {
-                skill3 = GameRes.GetSkill(3);
-
-            }
-            if (Instance.level >= 20)
-            {
-                skill4 = GameRes.GetSkill(4);
-
-            }
-            if (Instance.level >= 25)
-            {
-                skill5 = GameRes.GetSkill(5);
-
-            }
-        }*/
+   
     }    
 }
 

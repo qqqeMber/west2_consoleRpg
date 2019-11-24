@@ -14,11 +14,13 @@ namespace west2_consoleRpg
 
         public Monster Clone()
         {
-            Monster temp = new Monster();
-            temp.id = this.id;
-            temp.name = this.name;
-            temp.atk = this.atk;
-            temp.hp = this.hp;
+            Monster temp = new Monster
+            {
+                id = this.id,
+                name = this.name,
+                atk = this.atk,
+                hp = this.hp
+            };
 
             return temp;
         }
@@ -87,67 +89,79 @@ namespace west2_consoleRpg
                 XmlNodeList list = root.SelectNodes("job");
                 foreach (XmlNode nd in list)
                 {
-                    Job jb = new Job();
-                    jb.id = int.Parse(nd.Attributes["id"].Value);
-                    jb.name = nd.Attributes["name"].Value;
-                    jb.atk = int.Parse(nd.Attributes["atk"].Value);
-                    jb.hp = int.Parse(nd.Attributes["hp"].Value);
-                    jb.mp = int.Parse(nd.Attributes["mp"].Value);
-                    jb.hprate = int.Parse(nd.Attributes["hprate"].Value);
-                    jb.mprate = int.Parse(nd.Attributes["mprate"].Value);
-                    jb.atkrate = int.Parse(nd.Attributes["atkrate"].Value);
+                    Job jb = new Job
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = nd.Attributes["name"].Value,
+                        atk = int.Parse(nd.Attributes["atk"].Value),
+                        hp = int.Parse(nd.Attributes["hp"].Value),
+                        mp = int.Parse(nd.Attributes["mp"].Value),
+                        hprate = int.Parse(nd.Attributes["hprate"].Value),
+                        mprate = int.Parse(nd.Attributes["mprate"].Value),
+                        atkrate = int.Parse(nd.Attributes["atkrate"].Value)
+                    };
                     Jobs.Add(jb.id,jb);
                 }
                  list = root.SelectNodes("weapon");
                  foreach(XmlNode nd in list)
                  {
-                     Weapon wp = new Weapon();
-                     wp.id = int.Parse(nd.Attributes["id"].Value);
-                     wp.name = (nd.Attributes["name"].Value);
-                     wp.atk = int.Parse(nd.Attributes["atk"].Value);
-                     wp.price = int.Parse(nd.Attributes["price"].Value);
-                     Weapons.Add(wp.id, wp);
+                    Weapon wp = new Weapon
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = (nd.Attributes["name"].Value),
+                        atk = int.Parse(nd.Attributes["atk"].Value),
+                        price = int.Parse(nd.Attributes["price"].Value)
+                    };
+                    Weapons.Add(wp.id, wp);
                  }
                  list = root.SelectNodes("item");
                  foreach (XmlNode nd in list)
                  {
-                     Item item = new Item();
-                     item.id = int.Parse(nd.Attributes["id"].Value);
-                     item.name = nd.Attributes["name"].Value;
-                     item.hp = int.Parse(nd.Attributes["hp"].Value);
-                     item.mp = int.Parse(nd.Attributes["mp"].Value);
-                     item.price = int.Parse(nd.Attributes["price"].Value);
-                     Items.Add(item.id, item);
+                    Item item = new Item
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = nd.Attributes["name"].Value,
+                        hp = int.Parse(nd.Attributes["hp"].Value),
+                        mp = int.Parse(nd.Attributes["mp"].Value),
+                        price = int.Parse(nd.Attributes["price"].Value)
+                    };
+                    Items.Add(item.id, item);
                  }
                  list = root.SelectNodes("monster");
                  foreach (XmlNode nd in list)
                  {
-                     Monster monster = new Monster();
-                     monster.id = int.Parse(nd.Attributes["id"].Value);
-                     monster.name = (nd.Attributes["name"].Value);
-                     monster.hp = int.Parse(nd.Attributes["hp"].Value);
-                     monster.atk = int.Parse(nd.Attributes["atk"].Value);
-                     Monsters.Add(monster.id, monster);
+                    Monster monster = new Monster
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = (nd.Attributes["name"].Value),
+                        hp = int.Parse(nd.Attributes["hp"].Value),
+                        atk = int.Parse(nd.Attributes["atk"].Value)
+                    };
+                    Monsters.Add(monster.id, monster);
                  }
                  list = root.SelectNodes("equip");
                  foreach (XmlNode nd in list)
                  {
-                     Equip equip = new Equip();
-                     equip.id = int.Parse(nd.Attributes["id"].Value);
-                     equip.name = nd.Attributes["name"].Value;
-                     equip.hp = int.Parse(nd.Attributes["hp"].Value);
-                     equip.mp = int.Parse(nd.Attributes["mp"].Value);
-                     equip.price = int.Parse(nd.Attributes["price"].Value);
-                     Equips.Add(equip.id, equip);
+                    Equip equip = new Equip
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = nd.Attributes["name"].Value,
+                        hp = int.Parse(nd.Attributes["hp"].Value),
+                        mp = int.Parse(nd.Attributes["mp"].Value),
+                        price = int.Parse(nd.Attributes["price"].Value)
+                    };
+                    Equips.Add(equip.id, equip);
                  }
                  list = root.SelectNodes("skill");
                  foreach (XmlNode nd in list)
                 {
-                    Skill skill = new Skill();
-                    skill.id = int.Parse(nd.Attributes["id"].Value);
-                    skill.name = nd.Attributes["name"].Value;
-                    skill.mp = int.Parse(nd.Attributes["mp"].Value);
-                    skill.rate = float.Parse(nd.Attributes["rate"].Value);
+                    Skill skill = new Skill
+                    {
+                        id = int.Parse(nd.Attributes["id"].Value),
+                        name = nd.Attributes["name"].Value,
+                        mp = int.Parse(nd.Attributes["mp"].Value),
+                        rate = float.Parse(nd.Attributes["rate"].Value)
+                    };
                     Skills.Add(skill.id, skill);
                 }
 

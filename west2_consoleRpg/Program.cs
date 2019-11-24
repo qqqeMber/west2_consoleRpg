@@ -8,7 +8,7 @@ namespace west2_consoleRpg
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             if (GameRes.LoadGameRes())
                 Startgame();
@@ -16,6 +16,7 @@ namespace west2_consoleRpg
             {
                 Console.WriteLine("你号没了（康康是不是xml文件不在根目录下面）");
                 Console.ReadKey();
+                Environment.Exit(0);
             }
 
         }
@@ -45,7 +46,7 @@ namespace west2_consoleRpg
             foreach (char s in story)
             {
                 Console.Write(s);
-                Thread.Sleep(10);
+                Thread.Sleep(25);
             }
             Playerrole.CreatPlayer();
         }
@@ -54,7 +55,7 @@ namespace west2_consoleRpg
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n\n\t\t\t{0}\n\n\n\n\t\t\t1.角色装备\n\n\t\t\t2:角色状态\n\n\t\t\t3.角色技能\n\n\t\t\t4.商店\n\n\t\t\t5.探险\n\n\t\t\t6.开坦克(真)",Playerrole.Instance.name);
-            shuaxin_shuxing();
+            Shuaxin_shuxing();
         hehe:
             string cs = Console.ReadLine();
             if (cs == "")
@@ -68,9 +69,10 @@ namespace west2_consoleRpg
                     case 4: Shop.shop(); break;
                     case 5: Battle.Explore(); break;
                     case 6: Battle.Boss(); break;
+                default:goto hehe;
             }
         }
-       public static void shuaxin_shuxing()
+       public static void Shuaxin_shuxing()
         {
             Playerrole.Instance.atk = Playerrole.Instance.baseatk + Playerrole.Instance.atkrate * Playerrole.Instance.level+ Playerrole.weapon.atk;
             Playerrole.Instance.hp = Playerrole.Instance.basehp + Playerrole.Instance.hprate * Playerrole.Instance.level+Playerrole.equip1.hp+Playerrole.equip2.hp+Playerrole.equip3.hp;
